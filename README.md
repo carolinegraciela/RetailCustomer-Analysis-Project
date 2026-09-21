@@ -64,7 +64,10 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 ## 4. Data Cleaning
 All cleaning was performed in Microsoft Excel and Power Query, producing cleaned table for analysis.
 ### 4.1 Cleaning Strategy per Column
+`customer_id`
+- Removed duplicate rows based on customer_id to ensure each customer is uniquely represented and to prevent double-counting.
+  
 `annual_income`
-- Converting the column from Text to Decimal/Currency to enable mathematical aggregations
+- Converted the column from Text to Decimal/Currency to enable mathematical aggregations
 - Checking whether there are null values in the "annual_income" column
 - Handled null values in the `annual_income` column via conditional median imputation, grouped by `region` and `customer_segment`
