@@ -75,7 +75,7 @@ All cleaning was performed in Microsoft Excel and Power Query, producing cleaned
 `avg_monthly_spend`
 - Converted the column from Text to Currency to enable mathematical aggregations
 - Checking whether there are null values in the "avg_monthly_spend" column
-- Applied conditional logic via Power Query: replaced nulls with 0 for non-transacting leads (purchase_frequency = 0), and imputed missing spending data for active buyers (purchase_frequency > 0) using the formula: (purchase_frequency * avg_order_value) / months_active.
+- Recovered missing records not by estimation, but by mathematically reverse-engineering the dataset's native derivation formula. Imputed nulls using the exact calculation: avg_order_value * (purchase_frequency + 1)
 
 `purchase_frequency`
 - Converted the column from Text to Decimal
