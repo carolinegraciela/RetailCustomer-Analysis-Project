@@ -85,3 +85,6 @@ All cleaning was performed in Microsoft Excel and Power Query, producing cleaned
 `purchase_frequency`
 - Make sure there are no null values
 - Rounded numerical columns to 2 decimal places to improve readability and consistency
+
+`discount_usage_rate`
+- Replaced null values with 0. Logically deduced that missing proportions occur either because of a lack of transaction history (purchase_frequency = 0) or because purchases were made entirely at full price without applied discounts.
