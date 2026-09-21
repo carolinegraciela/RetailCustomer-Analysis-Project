@@ -42,7 +42,7 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 | Column | Description |
 |-----:|---------------|
 | customer_id | Unique customer identifier.   |
-| age | Customer age (18–70). Includes nonlinear relationship with target.               |
+| age | Customer age (18–70). Includes a nonlinear relationship with the target.               |
 | annual_income | Log-normally distributed income with mild outliers. |
 | months_active	|	Number of months active on platform. |
 | avg_monthly_spend |	Average monthly expenditure (right-skewed). |
@@ -62,19 +62,19 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 
 ---
 ## 4. Data Cleaning
-All cleaning was performed in Microsoft Excel and Power Query, producing cleaned table for analysis.
+All cleaning was performed in Microsoft Excel and Power Query, producing a cleaned table for analysis.
 ### 4.1 Cleaning Strategy per Column
 `customer_id`
 - Removed duplicate rows based on customer_id to ensure each customer is uniquely represented and to prevent double-counting.
   
 `annual_income`
 - Converted the column from Text to Currency to enable mathematical aggregations
-- Checking whether there are null values in the "annual_income" column
+- Checked whether there are null values in the "annual_income" column
 - Handled null values in the `annual_income` column via conditional median imputation, grouped by `region` and `customer_segment`
 
 `avg_monthly_spend`
 - Converted the column from Text to Currency to enable mathematical aggregations
-- Checking whether there are null values in the "avg_monthly_spend" column
+- Checked whether there are null values in the "avg_monthly_spend" column
 - Recovered missing records not by estimation, but by mathematically reverse-engineering the dataset's native derivation formula. Imputed nulls using the exact calculation: avg_order_value * (purchase_frequency + 1)
 
 `purchase_frequency`
@@ -83,16 +83,24 @@ All cleaning was performed in Microsoft Excel and Power Query, producing cleaned
 - Rounded numerical columns to 2 decimal places to improve readability and consistency for downstream visualization
 
 `purchase_frequency`
-- Make sure there are no null values
+- Made sure there are no null values
 - Rounded numerical columns to 2 decimal places to improve readability and consistency
 
 `discount_usage_rate`
-- Replaced null values with 0. Logically deduced that missing proportions occur either because of a lack of transaction history (purchase_frequency = 0) or because purchases were made entirely at full price without applied discounts.
+- Replaced null values with 0. Logically deduced that missing proportions occur either because of a lack of transaction history (purchase_frequency = 0) or because purchases were made entirely at full price without applied discounts
 - Rounded numerical columns to 2 decimal places to improve readability and consistency
 
 `return_rate`
-- Replaced null values with 0. Nulls logically indicate there is no items returned.
+- Replaced null values with 0. Nulls logically indicate no items were returned
 - Rounded numerical columns to 2 decimal places to improve readability and consistency
 
 `browsing_time_minutes`
-- 
+- Avoided zero-filling to prevent artificial downward skewing of time metrics. Imputed nulls using the median browsing time grouped by customer_segment to preserve the natural distribution of user engagement
+- Converted the column from Text to Decimal
+- Rounded numerical columns to 2 decimal places to improve readability and consistency
+
+`support_interactions`
+- Handled all the missing values by converting "null" to "0"
+- Converted the column from Decimal to Whole Number
+
+``
