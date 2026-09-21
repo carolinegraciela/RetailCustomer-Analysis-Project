@@ -55,3 +55,5 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 | region |	Region classification (Urban, Semi-Urban, Rural). |
 | customer_segment	|	Target variable (multiclass). |
 ## 3. Cloud Environment & Tech Stack
+<img width="1280" height="720" alt="Data Analytics Workflow" src="https://github.com/user-attachments/assets/31681eb1-76fc-4a95-b5c9-eb4370558aff" />
+
