@@ -60,6 +60,11 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 ## 3. Cloud Environment & Tech Stack
 <img width="1280" height="720" alt="Data Analytics Workflow" src="https://github.com/user-attachments/assets/31681eb1-76fc-4a95-b5c9-eb4370558aff" />
 
-**Tools:** Microsoft Excel | Tableau
 ---
 ## 4. Data Cleaning
+All cleaning was performed in Microsoft Excel and Power Query, producing cleaned table for analysis.
+### 4.1 Cleaning Strategy per Column
+`annual_income`
+- Converting the column from Text to Decimal/Currency to enable mathematical aggregations
+- Checking whether there are null values in the "annual_income" column
+- Handled null values in the `annual_income` column via conditional median imputation, grouped by `region` and `customer_segment`
