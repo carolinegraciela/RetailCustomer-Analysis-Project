@@ -35,6 +35,7 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 - What specific behavior that distinguish "High Value" customers from "Occasional" buyers?
 - To what extend do operational friction points (such as return rate and support interactions) act as a bottleneck preventing "Occasional" customers from upgrading their segment?
 - Are there any specific transactional preference (payment method/geographic advantage) that strongly characterize the "High Value" segment and can be leveraged for upselling campaigns?
+---
 ## 2. Data Source
 **Platform:** Kaggle
 **Dataset:** [Click here](https://www.kaggle.com/datasets/rohit8527kmr7518/online-retail-customer-classification-dataset)
@@ -54,6 +55,11 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 | payment_method	| Primary payment method (Card, UPI, Wallet). |
 | region |	Region classification (Urban, Semi-Urban, Rural). |
 | customer_segment	|	Target variable (multiclass). |
+
+---
 ## 3. Cloud Environment & Tech Stack
 <img width="1280" height="720" alt="Data Analytics Workflow" src="https://github.com/user-attachments/assets/31681eb1-76fc-4a95-b5c9-eb4370558aff" />
+**Tools:** Microsoft Excel | Tableau
 
+---
+### 4. Data Cleaning
