@@ -80,5 +80,8 @@ All cleaning was performed in Microsoft Excel and Power Query, producing cleaned
 `purchase_frequency`
 - Converted the column from Text to Decimal
 - Handled all the missing values by converting "null" to "0"
-- Rounded numerical columns to 2 decimal places to improve readability and consistency for downstream visualization.
+- Rounded numerical columns to 2 decimal places to improve readability and consistency for downstream visualization
 
+`purchase_frequency`
+- Make sure there are no null values
+- Rounded numerical columns to 2 decimal places to improve readability and consistency
