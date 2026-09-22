@@ -62,7 +62,7 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 
 ---
 ## 4. Data Cleaning
-All cleaning was performed in Microsoft Excel and Power Query, producing a cleaned table for analysis.
+All cleaning was performed in Google Colab using Python, producing a cleaned table for analysis.
 ### 4.1 Cleaning Strategy per Column
 `customer_id`
 - Removed duplicate rows based on customer_id to ensure each customer is uniquely represented and to prevent double-counting.
