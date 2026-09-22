@@ -58,7 +58,7 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 
 ---
 ## 3. Cloud Environment & Tech Stack
-<img width="1280" height="720" alt="Data Analytics Workflow" src="https://github.com/user-attachments/assets/31681eb1-76fc-4a95-b5c9-eb4370558aff" />
+<img width="1280" height="720" alt="Data Analytics Workflow" src="https://github.com/user-attachments/assets/f0e83792-02cf-4ac3-ab9b-6a0480271186" />
 
 ---
 ## 4. Data Cleaning
