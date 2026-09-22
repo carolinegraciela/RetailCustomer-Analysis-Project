@@ -68,39 +68,35 @@ All cleaning was performed in Google Colab using Python, producing a cleaned tab
 - Removed duplicate rows based on customer_id to ensure each customer is uniquely represented and to prevent double-counting.
   
 `annual_income`
-- Converted the column from Text to Currency to enable mathematical aggregations
+- Made sure the dtype is float
 - Checked whether there are null values in the "annual_income" column
 - Handled null values in the `annual_income` column via conditional median imputation, grouped by `region` and `customer_segment`
 
+`purchase_frequency`
+- Made sure the dtype is float
+- Handled all the missing values by converting "null" to "0" (assumed the null values mean the customer hasn't made any purchases yet)
+
 `avg_monthly_spend`
-- Converted the column from Text to Currency to enable mathematical aggregations
+- Made sure the dtype is float
 - Checked whether there are null values in the "avg_monthly_spend" column
 - Recovered missing records not by estimation, but by mathematically reverse-engineering the dataset's native derivation formula. Imputed nulls using the exact calculation: avg_order_value * (purchase_frequency + 1)
 
-`purchase_frequency`
-- Converted the column from Text to Decimal
-- Handled all the missing values by converting "null" to "0"
-- Rounded numerical columns to 2 decimal places to improve readability and consistency for downstream visualization
-
-`purchase_frequency`
-- Made sure there are no null values
-- Rounded numerical columns to 2 decimal places to improve readability and consistency
-
 `discount_usage_rate`
 - Replaced null values with 0. Logically deduced that missing proportions occur either because of a lack of transaction history (purchase_frequency = 0) or because purchases were made entirely at full price without applied discounts
-- Rounded numerical columns to 2 decimal places to improve readability and consistency
 
 `return_rate`
 - Replaced null values with 0. Nulls logically indicate no items were returned
-- Rounded numerical columns to 2 decimal places to improve readability and consistency
 
 `browsing_time_minutes`
 - Avoided zero-filling to prevent artificial downward skewing of time metrics. Imputed nulls using the median browsing time grouped by customer_segment to preserve the natural distribution of user engagement
-- Converted the column from Text to Decimal
-- Rounded numerical columns to 2 decimal places to improve readability and consistency
 
 `support_interactions`
 - Handled all the missing values by converting "null" to "0"
-- Converted the column from Decimal to Whole Number
+- Converted the column from float to int
 
-``
+`payment_method`, `region`, `customer_segment`
+- Made sure there are no null values
+
+---
+## 5. Data Extraction & Feature Engineering
+### 5.1
