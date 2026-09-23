@@ -32,7 +32,7 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 - Does a higher dependency on discounts correlate with longer retention? Or do highly promotion-sensitive customers leave just as quickly?
 
 **Objective 2—Behavioral Profiling & Customer Journey Diagnostics**
-- What specific behavior that distinguish "High Value" customers from "Occasional" buyers?
+- What specific behaviors distinguish "High Value" customers from "Occasional" buyers?
 - To what extent do operational friction points (such as return rate and support interactions) act as a bottleneck preventing "Occasional" customers from upgrading their segment?
 - Are there any specific transactional preferences (payment method/geographic advantage) that strongly characterize the "High Value" segment and can be leveraged for upselling campaigns?
 ---
@@ -101,6 +101,25 @@ All cleaning was performed in Google Colab using Python, producing a cleaned tab
 ## 5. Data Extraction & Feature Engineering
 ### 5.1 Customer Lifetime Value (CLV) Calculation
 Customer Lifetime Value (CLV) was calculated in two steps:
-1. gross_CLV = `avg_monthly_spend` * `months_active`
-2. net_CLV = `gross_CLV` * (1-`return_rate`)
+1. `gross_CLV`: the customer lifetime value = `avg_monthly_spend` * `months_active`
+2. `net_CLV`: the customer lifetime value minus the return rate = `gross_CLV` * (1-`return_rate`)
 
+### 5.2 Discount Usage Segmentation 
+To analyze the impact of promotions (discount rate) on customer profitability, I categorized customers into tiers based on their `discount_usage_rate`.
+
+Rather than relying on arbitrary assumptions, I applied a data-driven approach using the dataset's distribution (quartiles) to establish logical thresholds:
+* **1 - No Discount:** Customers with a 0% discount rate.
+* **2 - Low Usage:** Customers below the 25th percentile (Q1).
+* **3 - Medium Usage:** Customers between the 25th and 75th percentiles (Q1 - Q3).
+* **4 - High Discount Hunter:** Customers above the 75th percentile (Q3).
+
+---
+## 6. Key Findings
+EDA was processed using SQL. Full code: [SQL for EDA]()
+
+---
+Finding 1: 
+
+---
+Data Cleaning & Preprocessing: [Google Colab](https://colab.research.google.com/drive/10RWDmGnf4o6dg4Ur6ldoeQxMXEd7lxPU?usp=sharing)
+EDA: 
