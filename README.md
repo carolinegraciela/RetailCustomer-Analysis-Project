@@ -102,4 +102,5 @@ All cleaning was performed in Google Colab using Python, producing a cleaned tab
 ### 5.1 Customer Lifetime Value (CLV) Calculation
 Customer Lifetime Value (CLV) was calculated in two steps:
 1. gross_CLV = `avg_monthly_spend` * `months_active`
-2. net_CLV = 
+2. net_CLV = `gross_CLV` * (1-`return_rate`)
+
