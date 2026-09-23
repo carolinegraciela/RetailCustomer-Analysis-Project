@@ -27,14 +27,14 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 |     2| Identify drivers for upselling |Behavioral Profiling & Customer Journey Diagnostics |
 ### 1.4 Key Business Questions (KBQ)
 **Objective 1—Promotion Sensitivity Analysis & CLV**
-- How does the discount rate correlate with customer lifetime valur indicators accross different customer segments?
+- How does the discount rate correlate with customer lifetime value indicators across different customer segments?
 - Are "High Value" customers genuinely loyal (maintaining high spending with low discount usage), or are their high transaction values driven by promotions?
-- Does a higher dependency on discount correlate with longer retention? Or do highly promotion-sensitive customers leave just as quickly?
+- Does a higher dependency on discounts correlate with longer retention? Or do highly promotion-sensitive customers leave just as quickly?
 
 **Objective 2—Behavioral Profiling & Customer Journey Diagnostics**
 - What specific behavior that distinguish "High Value" customers from "Occasional" buyers?
-- To what extend do operational friction points (such as return rate and support interactions) act as a bottleneck preventing "Occasional" customers from upgrading their segment?
-- Are there any specific transactional preference (payment method/geographic advantage) that strongly characterize the "High Value" segment and can be leveraged for upselling campaigns?
+- To what extent do operational friction points (such as return rate and support interactions) act as a bottleneck preventing "Occasional" customers from upgrading their segment?
+- Are there any specific transactional preferences (payment method/geographic advantage) that strongly characterize the "High Value" segment and can be leveraged for upselling campaigns?
 ---
 ## 2. Data Source
 **Platform:** Kaggle
@@ -99,4 +99,7 @@ All cleaning was performed in Google Colab using Python, producing a cleaned tab
 
 ---
 ## 5. Data Extraction & Feature Engineering
-### 5.1
+### 5.1 Customer Lifetime Value (CLV) Calculation
+Customer Lifetime Value (CLV) was calculated in two steps:
+1. gross_CLV = `avg_monthly_spend` * `months_active`
+2. net_CLV = 
