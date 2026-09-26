@@ -18,7 +18,7 @@ Online Retail Customer is a fictional structured customer behavior dataset gathe
 The dataset tracks customer behavior on both a daily and monthly basis, highlighting key metrics like purchase frequency and browsing time.
 ### 1.2 Business Problem
 Although the platform captures rich customer behavior metrics on a daily and monthly basis, management has yet to utilize this data to understand the underlying drivers of each customer segment. This knowledge gap has led to two critical business challenges:
-- **Problem 1: Promotion & Discount Inefficiency**: The company cannot distinguish whether high discount usage rates genuinely drive long-term customer loyalty. There is an urgent need to identify which customer segments are overly reliant on promotions to optimize the marketing budget.
+- **Problem 1: Promotion & Discount Inefficiency**: The company cannot distinguish whether high discount usage rates genuinely drive long-term customer loyalty. The company urgently needs to identify which customer segments rely too heavily on promotions to optimize the marketing budget.
 - **Problem 2: Unclear Behavioral Drivers for Upselling**: Management cannot identify the specific daily and monthly behaviors (such as browsing time or payment method preferences) that successfully transition an 'Occasional' buyer into a 'High-Value' customer, making it difficult to design targeted engagement strategies.
 ### 1.3 Project Objectives
 | No   | Objective     | Analysis Focus|
@@ -118,7 +118,33 @@ Rather than relying on arbitrary assumptions, I applied a data-driven approach u
 EDA was processed using SQL. Full code: [SQL for EDA]()
 
 ---
-Finding 1: 
+### Finding 1: "Promo Addiction" phenomenon in each segment: The majority are not buying at full price
+
+<img width="473" height="213" alt="image" src="https://github.com/user-attachments/assets/95e4b617-66b9-464d-98fe-04d3a2831503" />
+
+**The insight:** Across all customer segments, a staggering **~70% to 75%** of the total customer base relies heavily on promotions, falling primarily into the 'Medium Discount' and 'High Discount Hunter' tiers. Conversely, only a mere **~5%** of customers across the board are willing to transact at full price ('No Discount').
+
+**Why it matters:** This reveals a severe "promo addiction" embedded in the current consumer behavior. The business has inadvertently trained its audience to wait for markdowns before making a purchase. While this mass-discounting strategy may drive short-term transaction volume, it creates an unsustainable revenue model where profit margins are constantly cannibalized just to maintain baseline sales.
+
+---
+### Finding 2: High transactions on "High Value" customers are mostly driven by promotions
+
+<Gambar dari Tableau>
+
+**The insight:** The discount tier distribution within the "High Value" customer segment reveals that more than half of these top spenders (50.6%) fall into the Medium Discount category. The second largest group consists of High Discount Hunters at 22.76%, closely followed by the Low Discount tier at 22.14%. In stark contrast, customers who purchase at full price (No Discount) rank dead last, making up a mere 5.06% of this premium segment.
+
+**Why it matters:** This distribution mathematically disproves the assumption of organic brand loyalty among top-tier spenders. It highlights that even within the "High Value" label, purchasing behavior is predominantly driven by promotions and discounts rather than genuine brand affinity.
+
+---
+### Finding 3: Discounts Do Not Buy Loyalty (Zero Correlation with Retention)
+
+<Gambar dari Tableau>
+
+**The insight:** 
+An analysis of customer tenure (`avg_months_active`) reveals a completely flat retention curve across all discount tiers within any given segment. For instance, in the 'High Value' segment, customers who consistently pay full price remain active for an average of 54.8 months, while extreme 'High Discount Hunters' churn at 54.2 months. 
+
+**Why it matters:** 
+This definitively answers whether discounts extend customer lifespan: they do not. Highly promotion-sensitive customers leave just as quickly as non-discounted ones. Customer retention is dictated entirely by the segment's natural lifecycle, not by promotional incentives. Consequently, aggressively discounting products to retain customers longer is a flawed strategy that only accelerates margin erosion without improving loyalty.
 
 ---
 Data Cleaning & Preprocessing: [Google Colab](https://colab.research.google.com/drive/10RWDmGnf4o6dg4Ur6ldoeQxMXEd7lxPU?usp=sharing)
