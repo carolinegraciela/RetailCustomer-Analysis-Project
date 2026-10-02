@@ -138,13 +138,38 @@ EDA was processed using SQL. Full code: [SQL for EDA]()
 ---
 ### Finding 3: Discounts Do Not Buy Loyalty (Zero Correlation with Retention)
 
-<Gambar dari Tableau>
+<img width="331" height="168" alt="screenshot of findings" src="https://github.com/user-attachments/assets/b1049414-d458-400e-91f4-d090111c2eca" />
 
 **The insight:** 
 An analysis of customer tenure (`avg_months_active`) reveals a completely flat retention curve across all discount tiers within any given segment. For instance, in the 'High Value' segment, customers who consistently pay full price remain active for an average of 54.8 months, while extreme 'High Discount Hunters' churn at 54.2 months. 
 
 **Why it matters:** 
-This definitively answers whether discounts extend customer lifespan: they do not. Highly promotion-sensitive customers leave just as quickly as non-discounted ones. Customer retention is dictated entirely by the segment's natural lifecycle, not by promotional incentives. Consequently, aggressively discounting products to retain customers longer is a flawed strategy that only accelerates margin erosion without improving loyalty.
+This answers whether discounts extend customer lifespan: they do not. Highly promotion-sensitive customers leave just as quickly as non-discounted ones. Customer retention is dictated entirely by the segment's natural lifecycle, not by promotional incentives. Consequently, aggressively discounting products to retain customers longer is a flawed strategy that only accelerates margin erosion without improving loyalty.
+
+---
+### Finding 4: High-Value Status is Driven by Habit, Not Demographics or Transactional Preferences
+
+<img width="320" height="148" alt="image" src="https://github.com/user-attachments/assets/00a82a84-e78f-497c-9367-760664ed481c" />
+
+**The insight:**
+Contrary to common assumptions, there are virtually no differences in demographics (`age`), operational friction (`support_interactions`), or transactional preferences (`payment_method`) between 'High Value' and 'Occasional' buyers. Both segments average 43-44 years of age, experience the same minimal need for customer support (~1.4 interactions), and share identical payment habits (dominated by Credit/Debit Cards at ~50%). The single most definitive differentiator is purely behavioral: purchase frequency (8.29 vs. 3.13 transactions).
+
+**Why it matters:** 
+This proves that the operational bottleneck (such as payment method or customer service) is not the barrier preventing "Occasional" buyers from upgrading to top-tier status. It also indicates that demographic-targeted marketing or exclusive payment-method promotions will yield minimal impact. To successfully migrate customers into the 'High Value' segment, the business must pivot toward habit-forming strategies—such as personalized lifecycle nudges and engagement triggers—designed strictly to accelerate purchase frequency.
+
+---
+### Finding 5: The limitation of synthetic data
+
+**Why it matters:**
+The analysis is based on a synthetic snapshot dataset aggregated at the customer level. As it lacks timestamp transactional logs (SKU-level detail) and exhibits perfectly uniform categorical distributions, seasonal trend analysis and Market Basket Analysis were out of scope. The insights focus strictly on macro-behavioral segmentation and static CLV metrics.
+
+---
+## 7. Dashboard
+Designed as a narrative arc to tell all the findings.
+
+[Open dashboard on Tableau]()
+
+**Layout:**
 
 ---
 Data Cleaning & Preprocessing: [Google Colab](https://colab.research.google.com/drive/10RWDmGnf4o6dg4Ur6ldoeQxMXEd7lxPU?usp=sharing)
