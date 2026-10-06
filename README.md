@@ -129,7 +129,7 @@ EDA was processed using SQL. Full code: [SQL for EDA]()
 ---
 ### Finding 2: High transactions on "High Value" customers are mostly driven by promotions
 
-<Gambar dari Tableau>
+<img width="453" height="386" alt="1 - Discount Usage Distribution Visualization" src="https://github.com/user-attachments/assets/76d85df5-6917-4736-ba01-7fe0646d55b2" />
 
 **The insight:** The discount tier distribution within the "High Value" customer segment reveals that more than half of these top spenders (50.6%) fall into the Medium Discount category. The second largest group consists of High Discount Hunters at 22.76%, closely followed by the Low Discount tier at 22.14%. In stark contrast, customers who purchase at full price (No Discount) rank dead last, making up a mere 5.06% of this premium segment.
 
@@ -139,6 +139,9 @@ EDA was processed using SQL. Full code: [SQL for EDA]()
 ### Finding 3: Discounts Do Not Buy Loyalty (Zero Correlation with Retention)
 
 <img width="331" height="168" alt="screenshot of findings" src="https://github.com/user-attachments/assets/b1049414-d458-400e-91f4-d090111c2eca" />
+
+<img width="601" height="388" alt="2 - Discount and Retention Correlation" src="https://github.com/user-attachments/assets/eb27fc13-eb53-4f4b-9634-386db97a3a67" />
+
 
 **The insight:** 
 An analysis of customer tenure (`avg_months_active`) reveals a completely flat retention curve across all discount tiers within any given segment. For instance, in the 'High Value' segment, customers who consistently pay full price remain active for an average of 54.8 months, while extreme 'High Discount Hunters' churn at 54.2 months. 
