@@ -140,6 +140,8 @@ EDA was processed using SQL. Full code: [SQL for EDA]()
 
 <img width="331" height="168" alt="screenshot of findings" src="https://github.com/user-attachments/assets/b1049414-d458-400e-91f4-d090111c2eca" />
 
+<br>
+
 <img width="601" height="388" alt="2 - Discount and Retention Correlation" src="https://github.com/user-attachments/assets/eb27fc13-eb53-4f4b-9634-386db97a3a67" />
 
 
