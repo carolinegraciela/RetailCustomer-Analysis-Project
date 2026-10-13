@@ -215,5 +215,5 @@ Designed as a narrative arc to tell all the findings.
 ---
 Dataset: [Kaggle](https://www.kaggle.com/datasets/rohit8527kmr7518/online-retail-customer-classification-dataset)
 Data Cleaning & Preprocessing: [Google Colab](https://colab.research.google.com/drive/10RWDmGnf4o6dg4Ur6ldoeQxMXEd7lxPU?usp=sharing)
-EDA: [SQL]()
+EDA: [SQL](https://github.com/carolinegraciela/RetailCustomer-Analysis-Project/blob/main/EDA_query.sql)
 Visualizaion: [Tableau](https://public.tableau.com/app/profile/caroline.harmanto/viz/CustomerBehavioralAnalysis_17913008423020/Dashboard1?publish=yes)
