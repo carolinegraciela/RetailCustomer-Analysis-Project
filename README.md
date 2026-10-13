@@ -2,7 +2,7 @@
 > A comprehensive **End-to-End Diagnostic Analysis** using MS Excel, Power Query, and Tableau to uncover the behavioral and operational drivers behind customer retention and profitability.
 
 ## Table of Contents
-1. [Business Understanding](#business-understanding)
+1. [Business Understanding](#1-business-understanding)
 2. [Data Source](#data-source)
 3. [Cloud Environments & Tech Stack](#cloud-environments--tech-stack)
 4. [Data Cleaning](#data-cleaning)
