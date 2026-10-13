@@ -4,7 +4,7 @@
 ## Table of Contents
 1. [Business Understanding](#1-business-understanding)
 2. [Data Source](#2-data-source)
-3. [Cloud Environments & Tech Stack](#3-cloud-environments-tech-stack)
+3. [Cloud Environments & Tech Stack](#3-cloud-environments--tech-stack)
 4. [Data Cleaning](#4-data-cleaning)
 5. [Data Extraction & Feature Engineering](#5-data-extraction--feature-engineering)
 6. [Key Findings (Summary)](#6-key-findings-summary)
