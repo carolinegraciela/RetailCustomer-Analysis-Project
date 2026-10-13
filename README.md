@@ -56,7 +56,7 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 | customer_segment	|	Target variable (multiclass). |
 
 ---
-## 3. Cloud Environment & Tech Stack
+## 3. Cloud Environments & Tech Stack
 <img width="1280" height="720" alt="Data Analytics Workflow" src="https://github.com/user-attachments/assets/f0e83792-02cf-4ac3-ab9b-6a0480271186" />
 
 ---
