@@ -1,5 +1,5 @@
 # Online Retail Customer: CLV & Behavioral Profiling Analysis
-> A comprehensive **End-to-End Diagnostic & Prescriptive Analysis** using MS Excel, Power Query, and Tableau to uncover the behavioral and operational drivers behind customer retention and profitability.
+> A comprehensive **End-to-End Diagnostic Analysis** using MS Excel, Power Query, and Tableau to uncover the behavioral and operational drivers behind customer retention and profitability.
 
 ## Table of Contents
 1. Business Understanding
@@ -13,7 +13,7 @@
 ---
 ## 1. Business Understanding
 ### 1.1 Business Background
-Online Retail Customer is a fictional structured customer behavior dataset gathered from an online retail environment (Kaggle). The dataset categorizes customers into four segments: **Occasional** (Low engagement and transactional activity), **Regular** (Moderate purchasing consistency), **Loyal** (High engagement and repeat behavior), and **High Value** (Top-tier customers with strong lifetime value signals).
+Online Retail Customer is a fictional, structured customer behavior dataset gathered from an online retail environment (Kaggle). The dataset categorizes customers into four segments: **Occasional** (Low engagement and transactional activity), **Regular** (Moderate purchasing consistency), **Loyal** (High engagement and repeat behavior), and **High Value** (Top-tier customers with strong lifetime value signals).
 
 The dataset tracks customer behavior on both a daily and monthly basis, highlighting key metrics like purchase frequency and browsing time.
 ### 1.2 Business Problem
@@ -33,7 +33,6 @@ Although the platform captures rich customer behavior metrics on a daily and mon
 
 **Objective 2—Behavioral Profiling & Customer Journey Diagnostics**
 - What specific behaviors distinguish "High Value" customers from "Occasional" buyers?
-- To what extent do operational friction points (such as return rate and support interactions) act as a bottleneck preventing "Occasional" customers from upgrading their segment?
 - Are there any specific transactional preferences (payment method/geographic advantage) that strongly characterize the "High Value" segment and can be leveraged for upselling campaigns?
 ---
 ## 2. Data Source
@@ -172,10 +171,49 @@ The analysis is based on a synthetic snapshot dataset aggregated at the customer
 ## 7. Dashboard
 Designed as a narrative arc to tell all the findings.
 
-[Open dashboard on Tableau]()
+[➡️Open dashboard on Tableau](https://public.tableau.com/app/profile/caroline.harmanto/viz/CustomerBehavioralAnalysis_17913008423020/Dashboard1?publish=yes)
+
+<img width="677" height="386" alt="(Final) Dashboard" src="https://github.com/user-attachments/assets/e61b113f-5d17-4ca8-9e22-e34c80c0fa58" />
 
 **Layout:**
+- **Top Row:** KPI Score stating the number of customers, average Customer Lifetime Value (CLV), average purchase frequency, and average customer months active.
+- **Upper Section:** Segment-based comparison highlighting customer habits: including discount usage, platform engagement (browsing time & purchasing frequency), and payment preference.
+- **Bottom Section:** Correlation analysis evaluating the impact of discount tiers on customer retention and overall CLV.
 
 ---
+## 8. Insight & Recommended Actions
+
+### 8.1: Key Findings Summary
+**Objective 1—Promotion Sensitivity Analysis & CLV**
+1. ~95% of the total customers in each segment rely heavily on promotions, falling primarily into the "Medium Discount" and "High Discount Hunter" tiers. However, the CLV does not increase significantly. Contrary to the 'promo-addiction' assumption, higher discount rates do not produce higher CLV. Behavioral profiling shows that each customer segment shares nearly identical discount-usage distributions. 
+2. If customer loyalty is defined by maintaining high spending with low discount usage, the "High Value" segment fails this criterion, as they rely on promos just as heavily as occasional buyers.
+3. No, a higher dependency on discounts does not correlate with longer retention. Highly promotion-sensitive customers leave just as quickly as those who receive no discounts, evidenced by the flat retention curves across all tiers. The data shows that retention is driven entirely by customer segmentation: "High Value" customers (across all discount tiers) are more active than "Regular" and "Occasional" customers.
+
+**Objective 2—Behavioral Profiling & Customer Journey Diagnostics**
+1. "High Value" customers show significantly higher purchase volumes than "Occasional" buyers, demonstrating genuine loyalty. 
+2. While "High Value" customers show a slight preference for card payments, the variance across payment methods is marginal. This indicates that transactional preferences do not strongly characterize the segment. Therefore, upselling campaigns should not focus on specific payment channels, but rather on driving core platform engagement and habitual purchasing.
+
+---
+### 8.2: Strategic Pivot: Reconstruct the Promotion Allocation for All Customer Segments
+**Problem:** Data reveals a systemic over-reliance on promotional discounts across all customer segments, which wasted profit margins without improving Customer Lifetime Value (CLV) or extending retention.
+**Approach:** Pivot promotional spend away from high-tier discounts and invest in campaigns that drive core platform engagement. Focus on nurturing habit-forming customer journeys that naturally increase transaction frequency and strengthen brand connection. 
+
+---
+### 8.3: For "High Value" Customers: Focus on Margin Protection & Habit Maintenance
+**Problem:** The defining characteristic of "High Value" customers is their exceptional purchase frequency. However, because they still heavily rely on promotions, the business faces the challenge of deliberately sustaining this high-frequency habit without continuously eroding profit margins through deep discounts.
+**Approach**:
+- Transition to Experiential Rewards: Shift away from cash discounts and introduce non-monetary VIP perks (e.g., priority shipping, early access to new collections, or exclusive support lanes) to reward loyalty while protecting margins.
+- Implement Habit-Based Gamification: Leverage their natural tendency to purchase frequently by introducing streak-based milestones (e.g., "Complete 4 consecutive weeks of purchases to maintain VIP status"). This reinforces the habit loop without relying on financial incentives.
+
+---
+### 8.4: For "Occasional" Buyers: Focus on Habit Activation & Frequency Building
+**Problem:** These customers exhibit low platform engagement, with their limited transactions driven almost entirely by high-tier promotions rather than brand loyalty.
+**Approach:**
+- Deploy Trigger-Based Marketing Campaigns: Since payment methods are not a friction point, the root cause of low lifetime value is strictly a lack of engagement. Pivot email and push notification strategies from generic discount blasts to habit-forming behavioral triggers, such as personalized repurchase reminders or tailored product recommendations based on past behavior.
+- Optimize the Time-Between-Purchases Window: Given the significantly shorter lifespan (average active months) of these segments, early intervention is critical. Design targeted campaigns aimed at accelerating the second and third purchases within a tight timeframe (e.g., the first 30 days). The objective is to engineer habitual engagement before the churn risk peaks.
+
+---
+Dataset: [Kaggle](https://www.kaggle.com/datasets/rohit8527kmr7518/online-retail-customer-classification-dataset)
 Data Cleaning & Preprocessing: [Google Colab](https://colab.research.google.com/drive/10RWDmGnf4o6dg4Ur6ldoeQxMXEd7lxPU?usp=sharing)
-EDA: 
+EDA: [SQL]()
+Visualizaion: [Tableau](https://public.tableau.com/app/profile/caroline.harmanto/viz/CustomerBehavioralAnalysis_17913008423020/Dashboard1?publish=yes)
