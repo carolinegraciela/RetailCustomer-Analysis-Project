@@ -1,5 +1,5 @@
 # Online Retail Customer: CLV & Behavioral Profiling Analysis
-> A comprehensive **End-to-End Diagnostic Analysis** using MS Excel, Power Query, and Tableau to uncover the behavioral and operational drivers behind customer retention and profitability.
+> A comprehensive **End-to-End Diagnostic Analysis** using Python, SQL, and Tableau to uncover the behavioral and operational drivers behind customer retention and profitability.
 
 ## Table of Contents
 1. [Business Understanding](#1-business-understanding)
